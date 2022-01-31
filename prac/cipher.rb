@@ -1,1 +1,1 @@
-ascii = "barna".chars.map {|c| c.ord}
+shifted = "barna".chars.map {|c| c.ord}
