@@ -1,17 +1,9 @@
-def caesar_cipher(string, i)
-  new_word = ''
-  string.each_char do |i|
-    i.to_i.times do
-      if (i == 'z')
-        i = 'a'
-        next
-      end
-      i.next!
-      new_word += i
+def encrypt(msg, key)
+    msg.downcase.split("").each_with_index do |char, i|
+        next if msg[i] == " "
+        msg[i] = (msg[i].ord + key) > 122 ? (((msg[i].ord + key) % 123) + 97).chr : (msg[i].ord + key).chr
     end
-    puts new_word
-  end
-  
+    msg
 end
 
-caesar_cipher('hekk', 2)
+encrypt('hello', 5)
