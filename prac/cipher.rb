@@ -1,1 +1,1 @@
-puts ascii = "barna".chars.map {|c| c.ord}
+ascii = "barna".chars.map {|c| c.ord}
