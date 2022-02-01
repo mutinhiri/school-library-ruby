@@ -9,3 +9,5 @@ class Parent
 
   def altered()
     puts 'Parent altered'
+  end
+end
