@@ -1,4 +1,6 @@
 require "./Composition/remover.rb"
+require './Composition/foods.rb'
+
 
 class Animal
   ...
