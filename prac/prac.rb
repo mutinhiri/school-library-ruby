@@ -3,7 +3,7 @@ class Parent
     puts 'Parent override'
   end
 
-  def implict()
+  def implicit()
     puts 'Parent implicit'
   end
 
@@ -23,3 +23,15 @@ class Child < Parent
     puts 'child after  parent altered'
   end 
 end
+
+dad = Parent.new()
+son = Child.new()
+
+dad.implicit()
+son.implicit()
+
+dad.override()
+son.override()
+
+dad.altered()
+son.altered()
