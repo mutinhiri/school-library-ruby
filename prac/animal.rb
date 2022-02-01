@@ -1,4 +1,12 @@
 class Animal
+    def initialize(type, number_of_legs, name = "Unknown")
+    @id = Random.rand(1..1000)
+    @name = name
+    @number_of_legs = number_of_legs
+    @type = type
+  end
+end
+
  def id
   @id
  end
@@ -18,11 +26,7 @@ class Animal
  def name = (value)
   @name = value
  end
- 
 end
 
 animal_1 = Animal.new("rex", 3)
 animal_2 = Animal.new("bob", 8)
-
-puts animal_1.speak
-puts animal_2
