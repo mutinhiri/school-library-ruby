@@ -3,6 +3,7 @@ class Animal
     @id = Random.rand(1..1000)
     @name = name
     @number_of_jobs = number_of_jobs
+    @type = type
   end
 
   def speak
