@@ -7,6 +7,6 @@ class Dog < Animal
   end
 
   def bring_a_stick
-    'here is your stick'
+    'here is your stick ....'
   end
 end
