@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# main class person
 class Person
   attr_accessor :name, :age
   attr_reader :id

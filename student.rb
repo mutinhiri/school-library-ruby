@@ -1,5 +1,7 @@
-require_relative 'person'
+# frozen_string_literal: true
 
+require_relative 'person'
+# class inherit
 class Student < Person
   attr_reader :classroom
 
