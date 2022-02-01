@@ -5,3 +5,7 @@ class Parent
 
   def implict()
     puts 'Parent implicit'
+  end
+
+  def altered()
+    puts 'Parent altered'
