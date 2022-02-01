@@ -1,4 +1,4 @@
-require './remover.rb'
+require './remove.rb'
 
 class Animal
 
@@ -6,5 +6,5 @@ class Animal
     remover = Remover.new()
     @number_of_legs = remover.decrease(@number_of_legs)
   end
-  
+
 end
