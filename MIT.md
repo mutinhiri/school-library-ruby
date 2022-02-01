@@ -1,8 +1,8 @@
-## Copyright 2021, [Barnabas Mutinhiri]
+## Copyright 2022, Barnabas Mutinhiri
 
 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this ruby app and associated documentation files, to deal in the app without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [APP TYPE], and to permit persons to whom the [APP TYPE] is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this ruby app and associated documentation files, to deal in the app without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the APP, and to permit persons to whom the APP is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the app.
 
