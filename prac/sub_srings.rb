@@ -2,6 +2,8 @@ class Animal
   def initialize
     @id = Random.rand(1..1000)
     @name = 'barna'
+    @number_of_jobs = 4
+  end
 end
 
 animal_1 = Animal.new
