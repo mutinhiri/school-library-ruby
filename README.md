@@ -8,7 +8,7 @@ To run this project on your machine, clone the repo
 
 ``` git clone https://github.com/mutinhiri/school-library-ruby```
 
-and open the directory ```school library ruby``
+and  ``` cd school-library-ruby``
 
 you can then run ```  ruby person.rb ```
 
