@@ -1,6 +1,6 @@
 # OOP School Library 
 
-> This project implements classes and objecys in Ruby, Implementing encapsulation and inheritance features
+> This project implements classes and objects in Ruby, Implementing encapsulation and inheritance features
 
 ## Getting Started 
 
