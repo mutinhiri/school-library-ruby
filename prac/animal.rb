@@ -30,4 +30,9 @@ class Animal
     remover = Remover.new()
     @number_of_legs = remover.decrease(@number_of_legs)
   end
+
+  def owner = (owner)
+    @owner = ownerowner.animals.push(self).unless owner.animals.include?(self)
+  end
+  
 end
