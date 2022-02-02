@@ -1,4 +1,5 @@
 class Owner 
+  attr_reader :owner
   attr_accessor :name
   attr_reader :animals
 
