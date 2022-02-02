@@ -10,3 +10,5 @@ class Owner
     @animals.push(animal)
   end
 end
+
+alex = Owner.new('Rex')
