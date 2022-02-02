@@ -3,6 +3,7 @@ require './Composition/foods.rb'
 
 
 class Animal
+  attr_reader :owner
   ...
 
   def id
