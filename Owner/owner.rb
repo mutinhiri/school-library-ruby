@@ -4,3 +4,7 @@ class Owner
 
   def initialize(name)
     @name = name@animals = []
+  end 
+
+  def add_animal(animal)
+    @animals.push(animal)
