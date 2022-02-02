@@ -1,4 +1,4 @@
-require_relative'correct'
+require_relative 'correct'
 # main class person
 class Person
   attr_accessor :name, :age
