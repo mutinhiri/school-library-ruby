@@ -8,3 +8,5 @@ class Owner
 
   def add_animal(animal)
     @animals.push(animal)
+  end
+end
