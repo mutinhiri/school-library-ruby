@@ -32,7 +32,8 @@ class Animal
   end
 
   def owner = (owner)
-    @owner = ownerowner.animals.push(self).unless owner.animals.include?(self)
+    @owner = owner
+    owner.animals.push(self).unless owner.animals.include?(self)
   end
   
 end
