@@ -25,5 +25,6 @@ class App
 
     loop do
       puts ''
-      
+      puts 'Select option by number'
+      @options.each { |key, value| puts "#{key} #{value}"}
     end
