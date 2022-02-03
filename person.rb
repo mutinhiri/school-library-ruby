@@ -26,6 +26,10 @@ class Person
     @name = @corrector.correct.name(@name)
   end
 
+  def to_s
+    "Name: #{@name}, Age: #{@age}, Id: #{@id}"
+  end
+
   def rent_book(date, book)
     Rental.new(date, book, self)
   end
