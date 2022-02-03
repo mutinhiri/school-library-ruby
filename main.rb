@@ -143,3 +143,6 @@ class App
     @rentals.each { |rental| puts rental if rental.person.id == @people[person_i.to_i].id }
   end
 end
+
+def main
+  app = App.new
