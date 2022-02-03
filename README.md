@@ -10,7 +10,7 @@ To run this project on your machine, clone the repo
 
 and  ``` cd school-library-ruby``
 
-you can then run ```  ruby person.rb ```
+you can then run ```  ruby main.rb ```
 
 
 ## Authors
