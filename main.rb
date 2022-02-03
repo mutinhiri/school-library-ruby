@@ -51,11 +51,16 @@ class App
     else
       puts 'Input a valid option'
     end
+  end
 
-    private
+  private
 
-    def list_books
-      if @books.empty?
-        puts 'There is no book available in the library'
+  def list_books
+    if @books.empty?
+      puts 'There is no book available in the library'
+    else
+      @books.each{ |book| puts book }
+    end
+  end
 
 end
