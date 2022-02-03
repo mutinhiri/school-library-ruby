@@ -93,6 +93,7 @@ class App
     name = gets.chomp
     print 'Has parent permission? [Y/N]:'
     allowed = gets.chomp
+    @people.push(Student.new(name: name, age: age, parent_permission: translate_answer(allowed.downcase)))
 
 
 
