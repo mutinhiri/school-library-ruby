@@ -7,5 +7,10 @@ class Visit
 
     @animal = animal
     animal.visits << self
+
+    @vet = vet
+    vet.visits << self
+
+  end
   
 end
