@@ -1,4 +1,11 @@
 class Visit
-  attr_reader
+  attr_reader :animal, :Vet
+  attr_accessor :date
+
+  def initialize(date, animal, vet)
+    @date = date 
+
+    @animal = animal
+    animal.visits << self
   
 end
