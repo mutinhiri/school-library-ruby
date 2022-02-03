@@ -30,5 +30,25 @@ class App
       option = gets.chomp
       break if option == '7'
 
-      menu_choice option
+      menu_select option
     end
+  end
+
+  def menu_select(option)
+    case option
+    when '1'
+      list_books
+    when '2'
+      list_people
+    when '3'
+      create_person
+    when '4'
+      create_book
+    when '5'
+      create_rental
+    when '6'
+      list_rentals
+    else
+      puts 'Input a valid option'
+
+end
