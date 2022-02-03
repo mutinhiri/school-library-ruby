@@ -134,6 +134,9 @@ class App
     puts 'Rental created successfully'
   end
 
+  def list_rentals
+    puts 'Select a person from the following list '
+
 
 
 end
