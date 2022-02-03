@@ -15,9 +15,8 @@ class App
       '3' => 'Create a person Teacher/ Student',
       '4' => 'Create a book',
       '5' => 'Create a rental',
-      '6' => 'List all rentals for a given person'
-      '7' => 'Exit'
-    }
+      '6' => 'List all rentals for a given person',
+      '7' => 'Exit'}
   end
 
   def run
