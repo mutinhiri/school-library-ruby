@@ -1,3 +1,8 @@
+require './student'
+require './teacher'
+require './classroom'
+require './book'
+
 class App
   def initialize
     @peope = []
@@ -12,3 +17,6 @@ class App
       '6' => 'List all rentals for a given person'
       '7' => 'Exit'
     }
+  end
+
+  def run
