@@ -88,6 +88,12 @@ class App
 
   def create_student
     print 'Age:'
+    age = gets.chomp
+    print 'Name:'
+    name = gets.chomp
+    print 'Has parent permission? [Y/N]:'
+    allowed = gets.chomp
+
 
 
 end
