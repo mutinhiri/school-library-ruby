@@ -5,5 +5,7 @@ class App
     @rentals = []
     @options = {
       '1' => 'List all books',
-      '2' =>
+      '2' => 'List all people',
+      '3' => 'Create a person Teacher/ Student',
+      '4' => 'Create a book',
     }
