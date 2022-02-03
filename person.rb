@@ -11,6 +11,7 @@ class Person
     @name = name
     @parent_permission = parent_permission
     @corrector = Corrector.new
+    @rentals = []
   end
 
   def can_use_services?
@@ -23,5 +24,9 @@ class Person
 
   def validate_name
     @name = @corrector.correct.name(@name)
+  end
+
+  def rent_book(date, book)
+    Rental.new(date, book, self)
   end
 end
