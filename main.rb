@@ -50,5 +50,12 @@ class App
       list_rentals
     else
       puts 'Input a valid option'
+    end
+
+    private
+
+    def list_books
+      if @books.empty?
+        puts 'There is no book available in the library'
 
 end
