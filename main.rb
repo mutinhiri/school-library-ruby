@@ -8,4 +8,7 @@ class App
       '2' => 'List all people',
       '3' => 'Create a person Teacher/ Student',
       '4' => 'Create a book',
+      '5' => 'Create a rental',
+      '6' => 'List all rentals for a given person'
+      '7' => 'Exit'
     }
