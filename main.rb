@@ -27,4 +27,8 @@ class App
       puts ''
       puts 'Select option by number'
       @options.each { |key, value| puts "#{key} #{value}"}
+      option = gets.chomp
+      break if option == '7'
+
+      menu_choice option
     end
