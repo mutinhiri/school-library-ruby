@@ -63,4 +63,8 @@ class App
     end
   end
 
+  def list_people
+    if @people.empty?
+      puts 'There is no one registered in the library'
+
 end
