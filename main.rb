@@ -117,5 +117,6 @@ class App
     author = gets.chomp
     @books.push(Book.new(title, author))
     puts 'Book created successfully'
+  end
 
 end
