@@ -6,3 +6,4 @@ class Vet
     @name = name
     @address = address@visits = []
   end 
+end
