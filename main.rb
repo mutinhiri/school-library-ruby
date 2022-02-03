@@ -66,5 +66,10 @@ class App
   def list_people
     if @people.empty?
       puts 'There is no one registered in the library'
+    else
+      @people.each { |person| puts person}
+    end
+  end
+  
 
 end
