@@ -106,7 +106,12 @@ class App
     @people.push(Teacher.new(name: name, age: age, specialization: specialization))
   end
 
-  def translate_answer()
+  def translate_answer(ans)
+    %[yes y].include?(ans)
+  end
+
+  def create_book
+    print 
 
 
 
