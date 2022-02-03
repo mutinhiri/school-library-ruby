@@ -135,7 +135,9 @@ class App
   end
 
   def list_rentals
-    puts 'Select a person from the following list '
+    puts 'Select a person from the following list'
+    @people.each_with_index { |person, index| puts "#{index}) #{person}" }
+    person_i = gets.chompputs ''
 
 
 
