@@ -105,7 +105,9 @@ class App
     specialization = gets.chomp
     @people.push(Teacher.new(name: name, age: age, specialization: specialization))
   end
-  
+
+  def translate_answer()
+
 
 
 
