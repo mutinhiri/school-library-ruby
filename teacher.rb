@@ -11,6 +11,6 @@ class Teacher < Person
   end
 
   def to_s
-    '[Teacher] #{super}'
+    "[Teacher] #{super}"
   end
 end
