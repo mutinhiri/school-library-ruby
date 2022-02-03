@@ -70,6 +70,24 @@ class App
       @people.each { |person| puts person}
     end
   end
-  
+
+  def create_person
+    print 'Press (1) to create a student or press (2) to create teacher? [input the number]:'
+    option = gets.chomp
+    case option
+    when '1'
+      create_student
+    when '2'
+      create_teacher
+    else
+      puts 'Not a valid option'
+      return
+    end
+    puts 'Person created successfully'
+  end
+
+  def create_student
+    print 'Age:'
+
 
 end
