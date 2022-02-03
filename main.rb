@@ -98,7 +98,10 @@ class App
 
   def create_teacher
     print 'Age'
+    age = gets.chomp
+    print 'Name'
     
+
 
 
 
