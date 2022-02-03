@@ -21,3 +21,9 @@ class App
   end
 
   def run
+    puts 'Welcome to Bunbee School Library'
+
+    loop do
+      puts ''
+      
+    end
