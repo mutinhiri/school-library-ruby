@@ -119,4 +119,10 @@ class App
     puts 'Book created successfully'
   end
 
+  def create_rental
+    puts 'Select a book from the following list by number'
+    @books.each_with_index { |book, index| puts "#{index} #{book}" }
+    
+
+
 end
