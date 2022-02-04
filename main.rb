@@ -3,6 +3,7 @@ require './teacher'
 require './classroom'
 require './book'
 require './rental'
+require 'pry'
 
 class App
   def initialize
@@ -34,10 +35,11 @@ class App
     end
   end
 
+  binding.pry
   def menu_choice(option)
     case option
     when '1'
-      list_books
+      list_boks
     when '2'
       list_people
     when '3'
