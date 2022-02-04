@@ -39,7 +39,7 @@ class App
   def menu_choice(option)
     case option
     when '1'
-      list_boks
+      list_books
     when '2'
       list_people
     when '3'
