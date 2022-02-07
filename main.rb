@@ -100,9 +100,9 @@ class HandleInput
   def handle_initialize(option)
     case option
       when '1'
-        list_books
+        HandleBooks.list_books
       when '2'
-        list_people
+        HandlePerson.list_people
       when '3'
         create_person
       when '4'
@@ -113,6 +113,20 @@ class HandleInput
         list_rentals
       else
         puts 'Not a valid option'
+    end
+  end
+
+  def handle_add_person
+    print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+    option = gets.chomp
+    case option
+    when '1'
+      HandlePerson.create_student
+    when '2'
+      HandlePerson.create_teacher
+    else
+      puts 'Not a valid option'
+      return
     end
   end
 
