@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require './student'
 require './teacher'
 require './classroom'
 require './book'
 require './rental'
 
+# Define App class
 class App
   def initialize
     @people = HandlePerson.new
@@ -19,15 +22,20 @@ class App
       '7' => 'Exit'
     }
   end
-  def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    @books.push(Book.new(title, author))
-    puts 'Book created successfully'
-  end
 
+  def run
+    puts 'Welcome to School Library App!'
+
+    loop do
+      puts ''
+      puts 'Please choose an option by entering a number:'
+      @options.each { |key, value| puts "#{key}) #{value}" }
+      option = gets.chomp
+      break if option == '7'
+
+      HandleInput.handle_initialize(option)
+    end
+  end
 end
 
 class HandlePerson
@@ -39,19 +47,19 @@ class HandlePerson
     %w[yes y].include?(ans)
   end
 
-  def create_student(age, name,parent_permission)
-    @people.push(Student.new(name: name, age: age, parent_permission: translate_answer(parent_permission.downcase)))
+  def create_student(age, name, parent_permission)
+    @people.push(Student.new(name:, age:, parent_permission: translate_answer(parent_permission.downcase)))
   end
 
-  def create_teacher(age,name, specialization)
-    @people.push(Teacher.new(name: name, age :age, specialization: specialization))
+  def create_teacher(age, name, specialization)
+    @people.push(Teacher.new(name:, age:, specialization:))
   end
 
   def display_people
     if @people.empty?
-      puts "no one is registered in the library"
+      puts 'no one is registered in the library'
     else
-      @people.each_with_index { |person, index| puts "#{index} #{person}"}
+      @people.each_with_index { |person, index| puts "#{index} #{person}" }
     end
   end
 
@@ -68,16 +76,19 @@ class HandleBooks
   def initialize
     @books = []
   end
-  def add_book(title,author)
-    @books.push(Book.new(title,author))
+
+  def add_book(title, author)
+    @books.push(Book.new(title, author))
   end
-    def list_books
+
+  def list_books
     if @books.empty?
       puts 'There is no book registered in the library'
     else
       @books.each { |book| puts book }
     end
   end
+end
 
 class HandleRentals
   def initialize
@@ -99,20 +110,20 @@ end
 class HandleInput
   def handle_initialize(option)
     case option
-      when '1'
-        HandleBooks.list_books
-      when '2'
-        HandlePerson.list_people
-      when '3'
-        create_person
-      when '4'
-        create_book
-      when '5'
-        create_rental
-      when '6'
-        list_rentals
-      else
-        puts 'Not a valid option'
+    when '1'
+      HandleBooks.list_books
+    when '2'
+      HandlePerson.list_people
+    when '3'
+      HandleInput.handle_add_person
+    when '4'
+      HandleInput.handle_add_book
+    when '5'
+      HandleInput.handle_add_rental
+    when '6'
+      HandleInput.handle_list_rentals
+    else
+      puts 'Not a valid option'
     end
   end
 
@@ -138,7 +149,7 @@ class HandleInput
       HandlePerson.create_teacher(age, name, specialization)
     else
       puts 'Not a valid option'
-      return
+      nil
     end
   end
 
@@ -174,116 +185,9 @@ class HandleInput
   end
 end
 
+def main
+  app = App.new
+  app.run
+end
 
-#   def run
-#     puts 'Welcome to School Library App!'
-
-#     loop do
-#       puts ''
-#       puts 'Please choose an option by eterin a number:'
-#       @options.each { |key, value| puts "#{key}) #{value}" }
-#       option = gets.chomp
-#       break if option == '7'
-
-#       menu_choice option
-#     end
-#   end
-
-#   def menu_choice(option)
-#     case option
-#     when '1'
-#       list_books
-#     when '2'
-#       list_people
-#     when '3'
-#       create_person
-#     when '4'
-#       create_book
-#     when '5'
-#       create_rental
-#     when '6'
-#       list_rentals
-#     else
-#       puts 'Not a valid option'
-#     end
-#   end
-
-#   private
-
-#   def list_books
-#     if @books.empty?
-#       puts 'There is no book registered in the library'
-#     else
-#       @books.each { |book| puts book }
-#     end
-#   end
-
-#   def list_people
-#     if @people.empty?
-#       puts 'There is no one registered in the library'
-#     else
-#       @people.each { |person| puts person }
-#     end
-#   end
-
-#   def create_person
-#     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
-#     option = gets.chomp
-#     case option
-#     when '1'
-#       create_student
-#     when '2'
-#       create_teacher
-#     else
-#       puts 'Not a valid option'
-#       return
-#     end
-#     puts 'Person created successfully'
-#   end
-
-
-
-
-
-#
-
-#   def create_book
-#     print 'Title: '
-#     title = gets.chomp
-#     print 'Author: '
-#     author = gets.chomp
-#     @books.push(Book.new(title, author))
-#     puts 'Book created successfully'
-#   end
-
-#   def create_rental
-#     puts 'Select a book from the following list by number'
-#     @books.each_with_index { |book, index| puts "#{index}) #{book}" }
-#     book_i = gets.chomp
-#     puts ''
-#     puts 'Select a person from the following list by number (not id)'
-#     @people.each_with_index { |person, index| puts "#{index}) #{person}" }
-#     person_i = gets.chomp
-#     puts ''
-#     print 'Date: '
-#     date = gets.chomp
-#     @rentals.push(Rental.new(date, @books[book_i.to_i], @people[person_i.to_i]))
-#     puts 'Rental created successfully'
-#   end
-
-#   def list_rentals
-#     puts 'Select a person from the following list by number (not id)'
-#     @people.each_with_index { |person, index| puts "#{index}) #{person}" }
-#     person_i = gets.chomp
-#     puts ''
-#     puts 'Rentals:'
-#     @rentals.each { |rental| puts rental if rental.person.id == @people[person_i.to_i].id }
-#   end
-# end
-
-# def main
-#   app = App.new
-#   app.run
-# end
-
-# main
+main
