@@ -7,7 +7,7 @@ require './rental'
 class App
   def initialize
     @people = HandlePerson.new
-    @books = []
+    @books = HandleBooks.new
     @rentals = []
     @options = {
       '1' => 'List all books',
@@ -18,6 +18,14 @@ class App
       '6' => 'List all rentals for a given person',
       '7' => 'Exit'
     }
+  end
+  def create_book
+    print 'Title: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    @books.push(Book.new(title, author))
+    puts 'Book created successfully'
   end
 
 end
@@ -54,6 +62,24 @@ class HandlePerson
   def get_person_from_index(index)
     @people[index]
   end
+end
+
+class HandleBooks 
+  def initialize
+    @books = []
+  end
+  def add_book(title,author)
+    @books.push(Book.new(title,author))
+  end
+    def list_books
+    if @books.empty?
+      puts 'There is no book registered in the library'
+    else
+      @books.each { |book| puts book }
+    end
+  end
+
+
 end
 
 
