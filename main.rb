@@ -31,8 +31,8 @@ class HandlePerson
     %w[yes y].include?(ans)
   end
 
-  def create_student(age, name,prent_permission)
-    @people.push(Student.new(name: name, age: age parent_permission: translate_answer(parent_permission.downcase)))
+  def create_student(age, name,parent_permission)
+    @people.push(Student.new(name: name, age: age, parent_permission: translate_answer(parent_permission.downcase)))
   end
 
   def create_teacher(age,name, specialization)
