@@ -5,7 +5,7 @@ require './book'
 require './rental'
 require './app'
 require './handle_person'
-require './handle_book'
+require './handle_books'
 require './handle_rentals'
 require './handle_input'
 

@@ -2,6 +2,7 @@
 class HandleInput
   # rubocop:disable Metrics/MethodLength
   def handle_initialize(option)
+    select = HandleBooks.new()
     case option
     when '1'
       HandleBooks.list_books
