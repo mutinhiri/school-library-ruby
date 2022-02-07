@@ -162,6 +162,16 @@ class HandleInput
     print 'Date: '
     date = gets.chomp
     HandleRentals.add_rental(date, book_i, person_i)
+  end
+
+  def handle_list_rentals
+    puts 'Select a person from the following list by number (not id)'
+    @people.each_with_index { |person, index| puts "#{index}) #{person}" }
+    person_i = gets.chomp
+    puts ''
+    puts 'Rentals:'
+    HandleRentals.list_rentals(person_i)
+  end
 end
 
 
