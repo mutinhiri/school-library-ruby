@@ -47,6 +47,15 @@ class HandlePerson
     end
   end
   
+  def get_id_from_index(index)
+    @people[index].id
+  end
+
+  def get_person_from_index(index)
+    @people[index]
+  end
+end
+
 
 #   def run
 #     puts 'Welcome to School Library App!'
