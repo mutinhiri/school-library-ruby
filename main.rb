@@ -96,6 +96,35 @@ class HandleRentals
   end
 end
 
+class HandleInput
+  def handle_initialize(option)
+    case option
+      when '1'
+        list_books
+      when '2'
+        list_people
+      when '3'
+        create_person
+      when '4'
+        create_book
+      when '5'
+        create_rental
+      when '6'
+        list_rentals
+      else
+        puts 'Not a valid option'
+    end
+  end
+
+  def handle_add_book
+    print 'Title: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    HandleBooks.add_book(title, author)
+end
+
+
 #   def run
 #     puts 'Welcome to School Library App!'
 
