@@ -16,9 +16,9 @@ class HandlePerson
     @people.push(Teacher.new(name:, age:, specialization:))
   end
 
-  def display_people
+  def list_people
     if @people.empty?
-      puts 'no one is registered in the library'
+      puts 'No one is registered in the library'
     else
       @people.each_with_index { |person, index| puts "#{index} #{person}" }
     end

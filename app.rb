@@ -27,7 +27,8 @@ class App
       option = gets.chomp
       break if option == '7'
 
-      HandleInput.handle_initialize(option)
+      start = HandleInput.new
+      start.handle_initialize(option)
     end
   end
 end
