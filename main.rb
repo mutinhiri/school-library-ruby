@@ -121,9 +121,21 @@ class HandleInput
     option = gets.chomp
     case option
     when '1'
-      HandlePerson.create_student
+      print 'Age: '
+      age = gets.chomp
+      print 'Name: '
+      name = gets.chomp
+      print 'Has parent permission? [Y/N]: '
+      pp = gets.chomp
+      HandlePerson.create_student(age, name, pp)
     when '2'
-      HandlePerson.create_teacher
+      print 'Age: '
+      age = gets.chomp
+      print 'Name: '
+      name = gets.chomp
+      print 'Specialization: '
+      specialization = gets.chomp
+      HandlePerson.create_teacher(age, name, specialization)
     else
       puts 'Not a valid option'
       return
@@ -136,6 +148,7 @@ class HandleInput
     print 'Author: '
     author = gets.chomp
     HandleBooks.add_book(title, author)
+  end
 end
 
 
