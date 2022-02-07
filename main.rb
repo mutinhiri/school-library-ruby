@@ -149,6 +149,19 @@ class HandleInput
     author = gets.chomp
     HandleBooks.add_book(title, author)
   end
+
+  def handle_add_rental
+    puts 'Select a book from the following list by number'
+    @books.each_with_index { |book, index| puts "#{index}) #{book}" }
+    book_i = gets.chomp
+    puts ''
+    puts 'Select a person from the following list by number (not id)'
+    @people.each_with_index { |person, index| puts "#{index}) #{person}" }
+    person_i = gets.chomp
+    puts ''
+    print 'Date: '
+    date = gets.chomp
+    HandleRentals.add_rental(date, book_i, person_i)
 end
 
 
