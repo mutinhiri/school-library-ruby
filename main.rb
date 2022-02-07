@@ -38,6 +38,16 @@ class HandlePerson
   def create_teacher(age,name, specialization)
     @people.push(Teacher.new(name: name, age :age, specialization: specialization))
   end 
+
+  def display_people
+    if @people.empty?
+      puts "no one is registered in the library"
+    else
+      @people.each_with_index { |person, index| puts "#{index} #{person}"}
+    end
+  end
+  
+
 #   def run
 #     puts 'Welcome to School Library App!'
 
@@ -106,19 +116,9 @@ class HandlePerson
 
 
 
-#   def create_teacher
-#     print 'Age: '
-#     age = gets.chomp
-#     print 'Name: '
-#     name = gets.chomp
-#     print 'Specialization: '
-#     specialization = gets.chomp
-#     @people.push(Teacher.new(name: name, age: age, specialization: specialization))
-#   end
 
-#   def translate_answer(ans)
-#     %w[yes y].include?(ans)
-#   end
+
+#
 
 #   def create_book
 #     print 'Title: '
