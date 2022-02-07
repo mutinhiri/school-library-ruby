@@ -8,7 +8,7 @@ class App
   def initialize
     @people = HandlePerson.new
     @books = HandleBooks.new
-    @rentals = []
+    @rentals = HandleRentals.new
     @options = {
       '1' => 'List all books',
       '2' => 'List all people',
@@ -45,7 +45,7 @@ class HandlePerson
 
   def create_teacher(age,name, specialization)
     @people.push(Teacher.new(name: name, age :age, specialization: specialization))
-  end 
+  end
 
   def display_people
     if @people.empty?
@@ -54,7 +54,7 @@ class HandlePerson
       @people.each_with_index { |person, index| puts "#{index} #{person}"}
     end
   end
-  
+
   def get_id_from_index(index)
     @people[index].id
   end
@@ -64,7 +64,7 @@ class HandlePerson
   end
 end
 
-class HandleBooks 
+class HandleBooks
   def initialize
     @books = []
   end
@@ -79,9 +79,22 @@ class HandleBooks
     end
   end
 
+class HandleRentals
+  def initialize
+    @rentals = []
+  end
 
+  def add_rental(date, book, person)
+    @rentals.push(Rental.new(date, @books[book.to_i], @people[person.to_i]))
+    puts 'Rental created successfully'
+  end
+
+  def list_rentals(person_id)
+    puts ''
+    puts 'Rentals:'
+    @rentals.each { |rental| puts rental if rental.person.id == @people[person_id.to_i].id }
+  end
 end
-
 
 #   def run
 #     puts 'Welcome to School Library App!'
