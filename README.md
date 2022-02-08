@@ -21,7 +21,20 @@ you can then run ```  ruby main.rb ```
 - Twitter: [@Bunbee02](https://twitter.com/Bunbee02)
 - LinkedIn: [@Bunbee](https://linkedin.com/in/linkedinhandle)
 
+## Author2
 
+👤 **Anibal Amoroso**
+
+- GitHub: [sj1978](https://github.com/sj1978)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anibalamoroso/)
+
+## Author 3
+
+👤 **Luis Fernando Jimenez**
+
+- GitHub: [@lu-jim](https://github.com/lu-jim)
+- Twitter: [@lujimhe](https://twitter.com/lujimhe)
+- LinkedIn: [@lujim](https://www.linkedin.com/in/lujim/)
 
 ## 🤝 Contributing
 
