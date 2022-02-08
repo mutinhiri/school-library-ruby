@@ -1,4 +1,5 @@
 require './rental'
+# Creates an Book class
 class Book
   attr_accessor :title, :author, :rentals
 
