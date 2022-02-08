@@ -1,27 +1,18 @@
 # Create HandleInput class
-class HandleInput
+class MenuChoice
   # rubocop:disable Metrics/MethodLength
   def handle_initialize(option)
-    book = HandleBooks.new
-    person = HandlePerson.new
-    input = HandleInput.new
+    @books = HandleBooks.new
+    @person = HandlePerson.new
+    @rentals = HandleRentals.new
+  end
 
-    case option
-    when '1'
-      book.list_books
-    when '2'
-      person.list_people
-    when '3'
-      input.handle_add_person
-    when '4'
-      input.handle_add_book
-    when '5'
-      input.handle_add_rental
-    when '6'
-      input.handle_list_rentals
-    else
-      puts 'Not a valid option'
-    end
+  def list_books
+    @books.list_books
+  end
+
+  def list_people
+    @people.list_people
   end
   # rubocop:enable Metrics/MethodLength
 
@@ -29,28 +20,24 @@ class HandleInput
   def handle_add_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     option = gets.chomp
-    new_person = HandlePerson.new
+    print 'Age'
+    age = gets.chomp
+    print 'Name'
+    name = gets.chomp
     case option
     when '1'
-      print 'Age: '
-      age = gets.chomp
-      print 'Name: '
-      name = gets.chomp
       print 'Has parent permission? [Y/N]: '
       pp = gets.chomp
-      new_person.create_student(age, name, pp)
+      @people.create_student(age, name, pp)
     when '2'
-      print 'Age: '
-      age = gets.chomp
-      print 'Name: '
-      name = gets.chomp
       print 'Specialization: '
       specialization = gets.chomp
-      new_person.create_teacher(age, name, specialization)
+      @people.create_teacher(age, name, specialization)
     else
       puts 'Not a valid option'
-      nil
+      return
     end
+    puts "person created successfully"
   end
 
   def handle_add_book
@@ -58,8 +45,8 @@ class HandleInput
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
-    new_book = HandleBooks.new
-    new_book.add_book(title, author)
+    @books.add_book = (title, author)
+    puts 'Book created successfully'
   end
 
   def handle_add_rental
@@ -78,13 +65,12 @@ class HandleInput
   end
   # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
-  def handle_list_rentals
-    new_rental = HandleRentals.new
+  def list_rentals
     puts 'Select a person from the following list by number (not id)'
-    @people.each_with_index { |person, index| puts "#{index}) #{person}" }
+    @people.list_people_with_index 
     person_i = gets.chomp
     puts ''
     puts 'Rentals:'
-    new_rental.list_rentals(person_i)
+    @rentals.get_rentals(@people.get_id_from_index(person_i.to_i))
   end
 end
