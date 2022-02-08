@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Define Handle Person
 class HandlePerson
   def initialize
@@ -13,22 +15,22 @@ class HandlePerson
   end
 
   def create_teacher(age, name, specialization)
-    @people.push(Teacher.new(name: name, age: age, specialization: specialization))
+    @people.push(Teacher.new(name:, age:, specialization:))
   end
 
   def list_people
     if @people.empty?
       puts 'No one is registered in the library'
     else
-      @people.each { |person | puts  person }
+      @people.each { |person| puts person }
     end
   end
 
   def list_people_with_index
     if @people.empty?
-      puts "There is no one registered in the library"
+      puts 'There is no one registered in the library'
     else
-      @people.each_with_index { |person, index| puts "#{index}) #{person}"}
+      @people.each_with_index { |person, index| puts "#{index}) #{person}" }
     end
   end
 

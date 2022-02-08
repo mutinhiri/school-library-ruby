@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './handle_input'
 class App
   def initialize
@@ -46,4 +48,3 @@ class App
     end
   end
 end
-

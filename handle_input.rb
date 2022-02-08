@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './handle_rentals'
 require './handle_books'
 require './handle_person'
@@ -7,7 +9,6 @@ require './book'
 require './rental'
 # Create HandleInput class
 class MenuChoice
-  # rubocop:disable Metrics/MethodLength
   def initialize
     @books = HandleBooks.new
     @people = HandlePerson.new
@@ -23,14 +24,13 @@ class MenuChoice
   end
 
   def list_rentals
-  puts 'Select a person from the following list by number (not id)'
-  @people.list_people_with_index 
-  person_i = gets.chomp
-  puts ''
-  puts 'Rentals:'
-  @rentals.get_rentals(@people.get_id_from_index(person_i.to_i))
- end
-  # rubocop:enable Metrics/MethodLength
+    puts 'Select a person from the following list by number (not id)'
+    @people.list_people_with_index
+    person_i = gets.chomp
+    puts ''
+    puts 'Rentals:'
+    @rentals.get_rentals(@people.get_id_from_index(person_i.to_i))
+  end
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def create_person
@@ -53,7 +53,7 @@ class MenuChoice
       puts 'Not a valid option'
       return
     end
-    puts "person created successfully"
+    puts 'person created successfully'
   end
 
   def create_book

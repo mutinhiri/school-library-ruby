@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Create HandleRentals class
 class HandleRentals
   def initialize
@@ -5,7 +7,7 @@ class HandleRentals
   end
 
   def add_rental(date, book, person)
-    @rentals.push(Rental.new(date,book,person))
+    @rentals.push(Rental.new(date, book, person))
     puts 'Rental created successfully'
   end
 
