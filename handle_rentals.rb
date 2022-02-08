@@ -12,7 +12,12 @@ class HandleRentals
       JSON.parse(File.read(file)).map do |r|
         person = people.find { |p| p.id == r['person']['id'] }
         book = books.find { |b| b.title == r['book']['title'] }
-        add_rental(r['date'], book, person) 
+        add_rental(r['date'], book, person)
+      end
+    else
+      []
+    end
+  end
 
   def add_rental(date, book, person)
     @rentals.push(Rental.new(date, book, person))
