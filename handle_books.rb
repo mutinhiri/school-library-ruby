@@ -19,4 +19,13 @@ class HandleBooks
   def list_books_with_index
     if @booksempty?
       puts "No book registered in the library"
+    else
+      @books.each_with_index { |book, index| puts "#{index}) #{book}"}
+    end
+  end
+
+  def get_book_from_index(index)
+    @books[index]
+  end
+  
 end
