@@ -1,5 +1,7 @@
 # Define HandleBooks class
 class HandleBooks
+  attr_accessor :books
+  
   def initialize
     @books = []
   end
