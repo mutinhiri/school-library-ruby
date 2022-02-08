@@ -4,6 +4,21 @@ class HandlePerson
     @people = []
   end
 
+  def read_people_json
+    file = 'people.json'
+    if File.exist? file
+      JSON.parse(File.read(file)).map do |p|
+        if p['specialization'].nil?
+          create_student(p['id'], p['age'], p['name'], p['pp'].to_s)
+        else
+          create_teacher(p['id'], p['age'], p['name'], p['specialization'])
+        end
+      end
+    else
+      []
+    end
+  end
+
   def translate_answer(ans)
     %w[yes y].include?(ans)
   end
