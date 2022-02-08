@@ -5,6 +5,7 @@ require './student'
 require './teacher'
 require './book'
 require './rental'
+require 'json'
 # Create HandleInput class
 class MenuChoice
   def initialize
