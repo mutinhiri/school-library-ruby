@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 # Define Handle Person
 class HandlePerson

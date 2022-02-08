@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 # Creates a Correcotr class
 class Corrector
