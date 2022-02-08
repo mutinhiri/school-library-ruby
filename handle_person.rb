@@ -20,9 +20,15 @@ class HandlePerson
     if @people.empty?
       puts 'No one is registered in the library'
     else
-      @people.each_with_index { |person, index| puts "#{index} #{person}" }
+      @people.each { |person | puts  person }
     end
   end
+
+  def list_people_with_index
+    if @people.empty?
+      puts "There is no one registered in the library"
+    else
+      @people.each_with_index { |person, index| puts "#{index}) #{person}"}
 
   def get_id_from_index(index)
     @people[index].id
