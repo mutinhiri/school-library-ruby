@@ -26,6 +26,10 @@ class Student < Person
   def to_json(_optins = {})
     {
       'id' => @id,
-      
+      'age' => @age,
+      'name' => @name,
+      'pp' => @parent_permission,
+      'classroom' => @classroom
     }
+  end
 end

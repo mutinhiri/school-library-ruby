@@ -14,4 +14,10 @@ class Rental
   def to_s
     "Date: #{date}, Book\"#{book.title}\" by #{book.author}"
   end
+
+  def_to_json(_options = {})
+  {
+    'date' => @date,
+    'book' => @book.to_json
+  }
 end
