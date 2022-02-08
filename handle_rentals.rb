@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Create HandleRentals class
 class HandleRentals
   def initialize
