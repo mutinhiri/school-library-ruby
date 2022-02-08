@@ -1,5 +1,12 @@
+require './handle_rentals'
+require './handle_books'
+require './handle_person'
+require './student'
+require './teacher'
+require './book'
+require './rental'
 # Create HandleInput class
-class HandleInput
+class MenuChoice
   # rubocop:disable Metrics/MethodLength
   def initialize
     @books = HandleBooks.new

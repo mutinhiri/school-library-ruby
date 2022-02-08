@@ -1,3 +1,4 @@
+require './handle_input'
 class App
   def initialize
     @options = {
@@ -9,7 +10,7 @@ class App
       '6' => 'List all rentals for a given person',
       '7' => 'Exit'
     }
-    @menu_choices = HandleInput.new
+    @menu_choices = MenuChoice.new
   end
 
   def run
@@ -46,9 +47,3 @@ class App
   end
 end
 
-def main
-  app = App.new
-  app.run
-end
-
-main
