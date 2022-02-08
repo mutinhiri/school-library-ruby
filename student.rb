@@ -1,5 +1,3 @@
-
-
 require_relative 'person'
 # Creates an Student class
 class Student < Person

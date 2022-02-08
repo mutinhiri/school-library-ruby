@@ -1,5 +1,3 @@
-
-
 # Define Handle Person
 class HandlePerson
   def initialize

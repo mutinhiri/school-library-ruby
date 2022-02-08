@@ -1,5 +1,3 @@
-
-
 # Create HandleRentals class
 class HandleRentals
   def initialize

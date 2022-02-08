@@ -1,5 +1,3 @@
-
-
 require './handle_input'
 # Creates an App class
 class App

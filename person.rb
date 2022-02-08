@@ -1,5 +1,3 @@
-
-
 require_relative 'corrector'
 require './rental'
 # main class person

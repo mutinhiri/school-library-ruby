@@ -1,5 +1,3 @@
-
-
 # Creates a Correcotr class
 class Corrector
   def correct_name(name)

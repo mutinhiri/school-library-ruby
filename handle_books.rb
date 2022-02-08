@@ -1,5 +1,3 @@
-
-
 # Define HandleBooks class
 class HandleBooks
   def initialize

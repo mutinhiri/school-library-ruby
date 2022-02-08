@@ -1,5 +1,3 @@
-
-
 require './rental'
 # Creates an Book class
 class Book
