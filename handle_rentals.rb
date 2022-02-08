@@ -5,13 +5,13 @@ class HandleRentals
   end
 
   def add_rental(date, book, person)
-    @rentals.push(Rental.new(date, @books[book.to_i], @people[person.to_i]))
+    @rentals.push(Rental.new(date,book,person))
     puts 'Rental created successfully'
   end
 
-  def list_rentals(person_id)
+  def get_rentals(person_id)
     puts ''
     puts 'Rentals:'
-    @rentals.each { |rental| puts rental if rental.person.id == @people[person_id.to_i].id }
+    @rentals.each { |rental| puts rental if rental.person.id == person_id }
   end
 end
