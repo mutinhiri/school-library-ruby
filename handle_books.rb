@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Define HandleBooks class
 class HandleBooks
   def initialize

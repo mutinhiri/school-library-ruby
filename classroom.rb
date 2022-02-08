@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Creates an Classroom class
 class Classroom
   attr_accessor :label
   attr_reader :students

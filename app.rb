@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require './handle_input'
+# Creates an App class
 class App
   def initialize
     @options = {
