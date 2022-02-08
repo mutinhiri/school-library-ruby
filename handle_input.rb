@@ -1,9 +1,9 @@
 # Create HandleInput class
-class MenuChoice
+class HandleInput
   # rubocop:disable Metrics/MethodLength
-  def handle_initialize(option)
+  def initialize
     @books = HandleBooks.new
-    @person = HandlePerson.new
+    @people = HandlePerson.new
     @rentals = HandleRentals.new
   end
 
@@ -14,10 +14,19 @@ class MenuChoice
   def list_people
     @people.list_people
   end
+
+  def list_rentals
+  puts 'Select a person from the following list by number (not id)'
+  @people.list_people_with_index 
+  person_i = gets.chomp
+  puts ''
+  puts 'Rentals:'
+  @rentals.get_rentals(@people.get_id_from_index(person_i.to_i))
+ end
   # rubocop:enable Metrics/MethodLength
 
   # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-  def handle_add_person
+  def create_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     option = gets.chomp
     print 'Age'
@@ -40,37 +49,27 @@ class MenuChoice
     puts "person created successfully"
   end
 
-  def handle_add_book
+  def create_book
     print 'Title: '
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
-    @books.add_book = (title, author)
+    @books.add_book(title, author)
     puts 'Book created successfully'
   end
 
-  def handle_add_rental
-    new_rental = HandleRentals.new
+  def create_rental
     puts 'Select a book from the following list by number'
-    @books.each_with_index { |book, index| puts "#{index}) #{book}" }
+    @books.list_books_with_index
     book_i = gets.chomp
     puts ''
     puts 'Select a person from the following list by number (not id)'
-    @people.each_with_index { |person, index| puts "#{index}) #{person}" }
+    @people.list_people_with_index
     person_i = gets.chomp
     puts ''
     print 'Date: '
     date = gets.chomp
-    new_rental.add_rental(date, book_i, person_i)
-  end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
-
-  def list_rentals
-    puts 'Select a person from the following list by number (not id)'
-    @people.list_people_with_index 
-    person_i = gets.chomp
-    puts ''
-    puts 'Rentals:'
-    @rentals.get_rentals(@people.get_id_from_index(person_i.to_i))
+    @rentals.add_rental(date, @books.get_book_from_index(book_i.to_i), @people.get_person_from_index(person_i.to_i))
+    puts 'Rental created successfully'
   end
 end

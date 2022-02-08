@@ -17,7 +17,7 @@ class HandleBooks
   end
 
   def list_books_with_index
-    if @booksempty?
+    if @books.empty?
       puts "No book registered in the library"
     else
       @books.each_with_index { |book, index| puts "#{index}) #{book}"}
@@ -27,5 +27,5 @@ class HandleBooks
   def get_book_from_index(index)
     @books[index]
   end
-  
+
 end
