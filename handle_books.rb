@@ -15,4 +15,8 @@ class HandleBooks
       @books.each { |book| puts book }
     end
   end
+
+  def list_books_with_index
+    if @booksempty?
+      puts "No book registered in the library"
 end
