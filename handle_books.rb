@@ -4,6 +4,17 @@ class HandleBooks
     @books = []
   end
 
+  def read_books_json
+    file = 'books.json'
+    if File.exist? file
+      JSON.parse(File.read(file)).map do |b|
+        add_book(b['title'], b['author'])
+      end
+    else
+      []
+    end
+  end
+
   def add_book(title, author)
     @books.push(Book.new(title, author))
   end
