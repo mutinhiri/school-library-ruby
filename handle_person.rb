@@ -29,6 +29,8 @@ class HandlePerson
       puts "There is no one registered in the library"
     else
       @people.each_with_index { |person, index| puts "#{index}) #{person}"}
+    end
+  end
 
   def get_id_from_index(index)
     @people[index].id
