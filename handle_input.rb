@@ -6,12 +6,22 @@ require './teacher'
 require './book'
 require './rental'
 require 'json'
+require './save'
 # Create HandleInput class
 class MenuChoice
   def initialize
     @books = HandleBooks.new
+    @books.read_books_json
     @people = HandlePerson.new
+    @people.read_people_json
     @rentals = HandleRentals.new
+    @rentals.read_rentals_json(@people.people, @books.books)
+  end
+
+  def saving_exit
+    puts "Saving"
+    @save = Save.new
+    @save.save(people: @people.people, books: @books.books, rentals: @rentals.rentals)
   end
 
   def list_books

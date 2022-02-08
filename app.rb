@@ -1,4 +1,7 @@
 require './handle_input'
+require './save'
+require 'json'
+
 # Creates an App class
 class App
   def initialize
@@ -24,7 +27,7 @@ class App
       option = gets.chomp
       break if option == '7'
 
-      menu_choice option
+      menu_choice option.saving_exit
     end
   end
 
