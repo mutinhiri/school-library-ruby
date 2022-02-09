@@ -1,7 +1,7 @@
-require_relative '../book.rb'
-require './rental.rb'
-require '../student.rb'
-require '../teacher.rb'
+require './book'
+require './rental'
+require './student'
+require './teacher'
 
 describe Rental do 
   context 'test class creation' do 
