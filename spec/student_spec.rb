@@ -28,7 +28,7 @@ describe Student do
     end
 
     it 'if student is an instance of a class' do
-      expect(student).to be_a person
+      expect(student).to be_a Person
     end
 
     it 'check if student is an instance of class Student' do
