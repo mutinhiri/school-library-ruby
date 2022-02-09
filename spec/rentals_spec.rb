@@ -33,10 +33,11 @@ describe Rental do
     end
 
     it 'checks if teacher has a rental' do
-      expect(teacher.rentals.length).to eq(rental_teacher)
+      expect(teacher.rentals.length).to eq(1)
     end
 
-    it ''
+    it 'check if teacher has correct rental' do
+      expect(teacher.rentals[0]).
 
 
 
