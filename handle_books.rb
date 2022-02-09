@@ -1,22 +1,20 @@
 require 'json'
-# Define HandleBooks class
 class HandleBooks
-  attr_accessor :books
+  attr_reader :books
 
   def initialize
-    file = 'books.json'
     @books = []
-    if File.exist? file
-      JSON.parse(File.read(file)).map do |b|
-        @books.push(b['title'], b['author'])
-      end
-    else
-      @books = []
-    end
   end
 
   def read_books_json
-    puts 'ok'
+    file = 'books.json'
+    if File.exist? file
+      JSON.parse(File.read(file)).map do |b|
+        add_book(b['title'], b['author'])
+      end
+    else
+      []
+    end
   end
 
   def add_book(title, author)
@@ -33,7 +31,7 @@ class HandleBooks
 
   def list_books_with_index
     if @books.empty?
-      puts 'No book registered in the library'
+      puts 'There is no book registered in the library'
     else
       @books.each_with_index { |book, index| puts "#{index}) #{book}" }
     end

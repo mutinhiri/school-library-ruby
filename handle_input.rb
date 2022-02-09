@@ -52,11 +52,11 @@ class MenuChoice
     when '1'
       print 'Has parent permission? [Y/N]: '
       pp = gets.chomp
-      @people.create_student(age, name, pp)
+      @people.create_student(nil, age, name, pp)
     when '2'
       print 'Specialization: '
       specialization = gets.chomp
-      @people.create_teacher(age, name, specialization)
+      @people.create_teacher(nil, age, name, specialization)
     else
       puts 'Not a valid option'
       return
