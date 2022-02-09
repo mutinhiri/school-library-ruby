@@ -27,7 +27,7 @@ you can then run ```  ruby main.rb ```
 
 - GitHub: [sj1978](https://github.com/sj1978)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anibalamoroso/)
-- - Twitter: [@AmorosoAnibal](https://twitter.com/AmorosoAnibal)
+- Twitter: [@AmorosoAnibal](https://twitter.com/AmorosoAnibal)
 
 ## Author 3
 
