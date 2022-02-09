@@ -1,5 +1,4 @@
 require './rental'
-require 'json'
 # Creates an Book class
 class Book
   attr_accessor :title, :author, :rentals
