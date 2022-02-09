@@ -17,3 +17,5 @@ describe Book do
     it 'Check if no rentals yet' do
       expect(book.rentals).to eq([])
     end
+  end
+end
