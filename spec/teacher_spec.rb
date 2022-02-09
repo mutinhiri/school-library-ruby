@@ -23,4 +23,12 @@ describe Teacher do
       expect(teacher.rentals).to eq([])
     end
 
-    it 'checks if '
+    it 'checks if student is an instance of class Person' do
+      expect(teacher).to be_a Person
+    end
+
+    it 'check if student is an instance of class Student' do
+      expect(teacher).to be_a Student
+    end
+  end
+end
