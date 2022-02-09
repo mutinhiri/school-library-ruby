@@ -22,4 +22,8 @@ describe Student do
     it 'check classroom' do
       expect(student.classroom).to eq('None')
     end
-    
+
+    it 'check if no rentals yet' do
+      expect(student.rentals).to eq([])
+    end
+
