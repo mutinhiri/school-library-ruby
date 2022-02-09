@@ -13,10 +13,9 @@ describe Person do
 
       describe '#id' do
         it 'returns the correct id' do
-         @person.id.should eql 'id01'
+          @person.id.should eql 'id01'
         end
       end
-
     end
   end
 end

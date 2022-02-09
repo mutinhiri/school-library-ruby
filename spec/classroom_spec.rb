@@ -14,8 +14,7 @@ describe Classroom do
       sample = Classroom.new(new_student)
       students = []
       sample.add_student(new_student)
-      expect(students) != nil 
+      !expect(students).nil?
+    end
   end
 end
-
-  end

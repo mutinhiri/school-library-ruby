@@ -3,8 +3,8 @@ require './rental'
 require './student'
 require './teacher'
 
-describe Rental do 
-  context 'test class creation' do 
+describe Rental do
+  context 'test class creation' do
     book = Book.new('Banking and Finance', 'Stephen J')
     student = Student.new(id: nil, name: 'Bill', age: 23, parent_permission: true)
     teacher = Teacher.new(id: nil, name: 'Boaz', age: 33, specialization: 'Finance')
@@ -16,7 +16,7 @@ describe Rental do
       expect(rental.to_s) == ("Date: #{@date}, Book \" by #{book.author}")
     end
 
-    it 'check if book has correct rental' do 
+    it 'check if book has correct rental' do
       expect(book.rentals[0]).to eq(rental)
     end
 
@@ -45,6 +45,3 @@ describe Rental do
     end
   end
 end
-
-
-
