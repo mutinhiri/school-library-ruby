@@ -1,7 +1,7 @@
-require_relative '../book'
-require_relative '../rental'
-require_relative '../student'
-require_relative '../teacher'
+require_relative '../book.rb'
+require './rental.rb'
+require '../student.rb'
+require '../teacher.rb'
 
 describe Rental do 
   context 'test class creation' do 
@@ -38,6 +38,13 @@ describe Rental do
 
     it 'check if teacher has correct rental' do
       expect(teacher.rentals[0]).to eq(rental_teacher)
+    end
+
+    it 'checks if rental is an instance of class Rental' do
+      expect(rental).to be_a Rental
+    end
+  end
+end
 
 
 
