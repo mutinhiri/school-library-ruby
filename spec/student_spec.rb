@@ -18,4 +18,8 @@ describe Student do
     it 'check parent permission' do
       expect(student.parent_permission).to eq(false)
     end
+
+    it 'check classroom' do
+      expect(student.classroom).to eq('None')
+    end
     
