@@ -16,4 +16,27 @@ describe Rental do
       expect(rental.to_s) == ("Date: #{@date}, Book \" by #{book.author}")
     end
 
-    it 'check if book has two rentals' do
+    it 'check if book has correct rental' do 
+      expect(book.rentals[0]).to eq(rental)
+    end
+
+    it 'checks if book has two rentals' do
+      expect(book.rentals.length).to eq(2)
+    end
+
+    it 'checks if student has rental' do
+      expect(student.rentals.length).to eq(1)
+    end
+
+    it 'checks if student has correct rental' do
+      expect(student.rentals[0]).to eq(rental)
+    end
+
+    it 'checks if teacher has a rental' do
+      expect(teacher.rentals.length).to eq(rental_teacher)
+    end
+
+    it ''
+
+
+
