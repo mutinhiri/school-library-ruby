@@ -1,5 +1,6 @@
-# Define Handle Person
 class HandlePerson
+  attr_reader :people
+
   def initialize
     @people = []
   end
@@ -23,17 +24,17 @@ class HandlePerson
     %w[yes y].include?(ans)
   end
 
-  def create_student(age, name, pp)
-    @people.push(Student.new(name:, age:, parent_permission: translate_answer(pp.downcase)))
+  def create_student(id, age, name, pp)
+    @people.push(Student.new(id: id, name: name, age: age, parent_permission: translate_answer(pp.downcase)))
   end
 
-  def create_teacher(age, name, specialization)
-    @people.push(Teacher.new(name:, age:, specialization:))
+  def create_teacher(id, age, name, specialization)
+    @people.push(Teacher.new(id: id, name: name, age: age, specialization: specialization))
   end
 
   def list_people
     if @people.empty?
-      puts 'No one is registered in the library'
+      puts 'There is no one registered in the library'
     else
       @people.each { |person| puts person }
     end

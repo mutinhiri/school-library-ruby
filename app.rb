@@ -1,4 +1,6 @@
 require './handle_input'
+require './book'
+require './rental'
 require './save'
 require 'json'
 
@@ -25,9 +27,12 @@ class App
       puts 'Please choose an option by eterin a number:'
       @options.each { |key, value| puts "#{key}) #{value}" }
       option = gets.chomp
-      break if option == '7'
+      if option == '7'
+        @menu_choices.saving_exit
+        break
+      end
 
-      menu_choice option.saving_exit
+      menu_choice(option)
     end
   end
 

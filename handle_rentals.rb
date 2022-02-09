@@ -1,4 +1,3 @@
-# Create HandleRentals class
 class HandleRentals
   attr_reader :rentals
 
@@ -21,7 +20,6 @@ class HandleRentals
 
   def add_rental(date, book, person)
     @rentals.push(Rental.new(date, book, person))
-    puts 'Rental created successfully'
   end
 
   def get_rentals(person_id)
