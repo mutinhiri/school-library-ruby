@@ -1,1 +1,1 @@
-require './book.rb'
+require './book'
