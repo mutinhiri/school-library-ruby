@@ -19,7 +19,7 @@ class MenuChoice
   end
 
   def saving_exit
-    puts "Saving"
+    puts 'Saving'
     @save = Save.new
     @save.save(people: @people.people, books: @books.books, rentals: @rentals.rentals)
   end
