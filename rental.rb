@@ -1,3 +1,4 @@
+require './rental'
 require 'json'
 
 class Rental
