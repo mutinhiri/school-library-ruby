@@ -37,7 +37,7 @@ describe Rental do
     end
 
     it 'check if teacher has correct rental' do
-      expect(teacher.rentals[0]).
+      expect(teacher.rentals[0]).to eq(rental_teacher)
 
 
 
