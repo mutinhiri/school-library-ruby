@@ -9,12 +9,12 @@ describe Corrector do
           expect(sample.correct_name(test_string)).to eq'Anibal' 
        end 
          
-    #    it "should detect when a string doesn't contain vowels" do 
-    #       sa = StringAnalyzer.new 
-    #       test_string = 'bcdfg' 
-    #       expect(sa.has_vowels? test_string).to be false
-    #    end 
+       it "should return a string no longer than 10 characters" do 
+          sample = Corrector.new 
+          test_string = 'anibalamoroso' 
+          expect(sample.correct_name(test_string)).to eq'Anibalamor'
+       end 
        
-    # end 
+    
     end
  end
