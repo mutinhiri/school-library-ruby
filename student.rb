@@ -23,7 +23,7 @@ class Student < Person
     "[Student] #{super}"
   end
 
-  def to_json(_optins = {})
+  def to_json(_options = {})
     {
       'id' => @id,
       'age' => @age,
