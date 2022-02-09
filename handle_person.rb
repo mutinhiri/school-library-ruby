@@ -25,11 +25,11 @@ class HandlePerson
   end
 
   def create_student(id, age, name, pp)
-    @people.push(Student.new(id: id, name: name, age: age, parent_permission: translate_answer(pp.downcase)))
+    @people.push(Student.new(id:, name:, age:, parent_permission: translate_answer(pp.downcase)))
   end
 
   def create_teacher(id, age, name, specialization)
-    @people.push(Teacher.new(id: id, name: name, age: age, specialization: specialization))
+    @people.push(Teacher.new(id:, name:, age:, specialization:))
   end
 
   def list_people
