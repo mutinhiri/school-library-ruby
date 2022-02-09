@@ -10,3 +10,17 @@ describe Teacher do
     it 'check name' do
       expect(teacher.name).to eq(name)
     end
+
+    it 'check age' do
+      expect(teacher.age).to eq(age)
+    end
+
+    it 'check specialization' do
+      expect(teacher.specialization).to eq(specialization)
+    end
+
+    it 'check if no rentals yet' do
+      expect(teacher.rentals).to eq([])
+    end
+
+    it 'checks if '
