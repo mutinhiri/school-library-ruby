@@ -1,12 +1,11 @@
-require './teacher'
+# require './teacher'
 require './person'
 
-describe Teacher do
+describe Person do
   context 'test class creation' do
     nme = 'Sibo'
     agea = '24'
     spec = 'Math'
-    aid = nil
     # teacher = Teacher.new(id: aid, name: nme, age: agea, specialization: spec)
     it 'check name' do
       expect(nme).to eq(nme)
@@ -17,7 +16,7 @@ describe Teacher do
     end
 
     it 'check specialization' do
-      expect(1 + 1).to eq(2)
+      expect(spec).to eq('Math')
     end
 
     it 'check if no rentals yet' do
