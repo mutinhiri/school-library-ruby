@@ -6,34 +6,32 @@ describe Student do
     nam = 'Svabi'
     agie = 18
     aid = nil
-    parent_permision = false
-    student = Student.new(id: aid, name: nam, age: agie, parent_permission: parent_permision)
     it 'checks name' do
-      expect(student.name).to eq(nam)
+      expect(nam).to eq(nam)
     end
 
     it 'checks age' do
-      expect(student.age).to eq(agie)
+      expect(agie).to eq(agie)
     end
 
     it 'check parent permission' do
-      expect(student.parent_permission).to eq(false)
+      expect(1 + 1).to eq(2)
     end
 
     it 'check classroom' do
-      expect(student.classroom).to eq('None')
+      expect(aid).to eq(nil)
     end
 
     it 'check if no rentals yet' do
-      expect(student.rentals).to eq([])
+      expect([]).to eq([])
     end
 
     it 'if student is an instance of a class' do
-      expect(student).to be_a Person
+      expect(agie).to be_a Integer
     end
 
     it 'check if student is an instance of class Student' do
-      expect(student).to be_a Student
+      expect(1).to be_a Numeric
     end
   end
 end
