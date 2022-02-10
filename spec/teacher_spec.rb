@@ -3,10 +3,11 @@ require './person'
 
 describe Teacher do
   context 'test class creation' do
-    name = 'Sibo'
-    age = '24'
-    specialization = 'Math'
-    teacher = Teacher.new(id: nil, name:, age:, specialization:)
+    nme = 'Sibo'
+    agea = '24'
+    spec = 'Math'
+    aid = nil
+    teacher = Teacher.new(id: aid, name: nme, age: agea, specialization: spec)
     it 'check name' do
       expect(teacher.name).to eq(name)
     end
