@@ -4,8 +4,8 @@ require 'json'
 class Teacher < Person
   attr_accessor :specialization
 
-  def initialize(id, age, specialization, name: 'Unknown')
-    super(id, age, name)
+  def initialize(id:, age:, specialization:, name: 'Unknown')
+    super(id:, age:, name:)
     @parent_permission = true
     @specialization = specialization
   end
