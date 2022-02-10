@@ -6,7 +6,7 @@ class Person
   attr_accessor :name, :age, :rentals, :parent_permission
   attr_reader :id
 
-  def initialize(id: SecureRandom.uuid , age:, name: 'Unknown', parent_permission: true)
+  def initialize(age:, id: SecureRandom.uuid, name: 'Unknown', parent_permission: true)
     @id = id
     @name = name
     @age = age
