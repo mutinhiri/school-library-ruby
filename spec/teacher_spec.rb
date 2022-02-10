@@ -6,7 +6,7 @@ describe Person do
     nme = 'Sibo'
     agea = '24'
     spec = 'Math'
-    # teacher = Teacher.new(id: aid, name: nme, age: agea, specialization: spec)
+
     it 'check name' do
       expect(nme).to eq(nme)
     end
