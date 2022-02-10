@@ -1,6 +1,5 @@
 require './book'
 require './rental'
-require './student'
 
 describe Rental do
   context 'test class creation' do
