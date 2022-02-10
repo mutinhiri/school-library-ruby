@@ -3,16 +3,17 @@ require './person'
 
 describe Student do
   context 'test class if created' do
-    name = 'Svabi'
-    age = 18
-    parent_permission = false
-    student = Student.new(id: nil, name:, age:, parent_permission:)
+    nam = 'Svabi'
+    agie = 18
+    aid = nil
+    parent_permision = false
+    student = Student.new(id: aid, name: nam, age: agie, parent_permission: parent_permision)
     it 'checks name' do
-      expect(student.name).to eq(name)
+      expect(student.name).to eq(nam)
     end
 
     it 'checks age' do
-      expect(student.age).to eq(age)
+      expect(student.age).to eq(agie)
     end
 
     it 'check parent permission' do
