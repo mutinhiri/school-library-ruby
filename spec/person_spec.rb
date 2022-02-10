@@ -24,12 +24,16 @@ describe Person do
       end
     end
 
-
     describe '#name' do
       it 'returns the right name' do
         expect(@person.name).to eq('name')
       end
     end
 
+    describe '#parent_permission' do
+      it 'returns true if the pp is not added' do
+        expect(@person.parent_permission).to eq(true)
+      end
+    end
   end
 end
