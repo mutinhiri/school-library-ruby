@@ -13,6 +13,13 @@ and  ``` cd school-library-ruby``
 you can then run ```  ruby main.rb ```
 
 
+TESTS 
+
+To run the tests: 
+
+rspec spec  
+
+
 ## Authors
 
 👤 **Author1**
