@@ -17,7 +17,7 @@ TESTS
 
 To run the tests: 
 
-rspec spec  
+```rspec spec```  
 
 
 ## Authors
