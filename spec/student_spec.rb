@@ -6,7 +6,7 @@ describe Student do
     name = 'Svabi'
     age = 18
     parent_permission = false
-    student = Student.new(id: nil, name:, age:, parent_permission:)
+    student = Student.new(id: nil, name, age, parent_permission)
     it 'checks name' do
       expect(student.name).to eq(name)
     end
