@@ -1,7 +1,6 @@
-require './student'
 require './person'
 
-describe Student do
+describe Person do
   context 'test class if created' do
     nam = 'Svabi'
     agie = 18
