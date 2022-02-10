@@ -19,10 +19,17 @@ describe Person do
     end
 
     describe '#age' do
-      it 'returns a correct uuid' do
-        uuid_regex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
-        expect(uuid_regex.match?(@person.id.to_s.downcase)).to eq(true)
+      it 'returns the right age' do
+        expect(@person.age).to eq(22)
       end
     end
+
+
+    describe '#name' do
+      it 'returns the right name' do
+        expect(@person.name).to eq('name')
+      end
+    end
+
   end
 end
