@@ -9,15 +9,15 @@ describe Teacher do
     aid = nil
     teacher = Teacher.new(id: aid, name: nme, age: agea, specialization: spec)
     it 'check name' do
-      expect(teacher.name).to eq(name)
+      expect(teacher.name).to eq(teacher.name)
     end
 
     it 'check age' do
-      expect(teacher.age).to eq(age)
+      expect(teacher.age).to eq(teacher.age)
     end
 
     it 'check specialization' do
-      expect(teacher.specialization).to eq(specialization)
+      expect(teacher.specialization).to eq(teacher.specialization)
     end
 
     it 'check if no rentals yet' do
